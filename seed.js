@@ -1,7 +1,7 @@
 const connection = require("./config/connection");
 const fetch = require("node-fetch");
 const Movie = require("./models/Movie");
-const apiKey = "5d02d151a5de46fe54760e8a9295da6a";
+const apiKey = "";
 
 connection.on("error", (err) => err);
 
