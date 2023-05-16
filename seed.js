@@ -1,7 +1,8 @@
+require("dotenv").config();
 const connection = require("./config/connection");
 const fetch = require("node-fetch");
 const Movie = require("./models/Movie");
-const apiKey = "";
+const apiKey = process.env.API_KEY;
 
 connection.on("error", (err) => err);
 

@@ -24,7 +24,7 @@ Make sure you install node-fetch@2 so that you can use fetch on the server side.
 Paste the client code into the seed.js
 Refer to seed.js for remaining code.
 
-This particular api only gives part of the poster path, as it should to reduce repeatative code stored in the the db, so here is how to contruct the whole poster path for your code:
+This particular api only gives part of the poster path, as it should to reduce repetative code stored in the the db, so here is how to construct the whole poster path for your code:
 
 ````
 https://image.tmdb.org/t/p/original/5ik4ATKmNtmJU6AYD0bLm56BCVM.jpg
