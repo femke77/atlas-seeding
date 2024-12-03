@@ -14,11 +14,11 @@ const fetchData = async () => {
   );
   const response = await res.json();
   response.results.forEach((m) => {
-    const nextMovie = {
+    const nextMovie = {   // put data in the structure you want with the names you want that match the schema
       title: m.title,
       poster_path: m.poster_path,
     };
-    movies.push(nextMovie);
+    movies.push(nextMovie); // push to temp array
   });
   console.log("Got movies from API. Ready to insert into DB.");
 };
@@ -26,9 +26,9 @@ const fetchData = async () => {
 connection.once("open", async () => {
   try {
     console.log("Connected to db.");
-    await fetchData();
-    await Movie.deleteMany({});
-    await Movie.insertMany(movies);
+    await fetchData();  // wait for the data and the temp array to be filled
+    await Movie.deleteMany({});  // clean the old data
+    await Movie.insertMany(movies);  // insert the data
     console.info(
       "Seeding complete! 🌱 Seeding complete! 🌱 Seeding complete! 🌱"
     );
