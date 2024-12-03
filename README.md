@@ -31,6 +31,7 @@ https://image.tmdb.org/t/p/original/5ik4ATKmNtmJU6AYD0bLm56BCVM.jpg
 ````
 
 example response for the endpoint in the code:
+
 ````
 {
   "dates": {
@@ -60,7 +61,16 @@ example response for the endpoint in the code:
       "vote_average": 7.01,
       "vote_count": 250
     },
-    ````
+  }
+]
+````
 
 
-    Use the Bearer token method of authenticating.
+
+
+
+Use the Bearer token method of authenticating.
+
+Compass:
+
+![compass](./compass.png)
