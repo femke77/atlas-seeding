@@ -10,6 +10,7 @@ const movies = [];
 
 const fetchData = async () => {
   const res = await fetch(
+    
     `https://api.themoviedb.org/3/movie/now_playing/?api_key=${apiKey}`
   );
   const response = await res.json();
