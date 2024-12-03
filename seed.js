@@ -2,16 +2,20 @@ require("dotenv").config();
 const connection = require("./config/connection");
 const fetch = require("node-fetch");
 const Movie = require("./models/Movie");
-const apiKey = process.env.API_KEY;
+const apiKey = process.env.BEARER_TOKEN;
 
 connection.on("error", (err) => console.error(err.message));
 
 const movies = [];
 
 const fetchData = async () => {
-  const res = await fetch(
-    
-    `https://api.themoviedb.org/3/movie/now_playing/?api_key=${apiKey}`
+  const res = await fetch(`https://api.themoviedb.org/3/movie/now_playing`, {
+    method: "GET",
+    headers: {
+      "Authorization": `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+  }
   );
   const response = await res.json();
   response.results.forEach((m) => {
