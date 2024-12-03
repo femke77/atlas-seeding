@@ -25,7 +25,7 @@ const fetchData = async () => {
     };
     movies.push(nextMovie); // push to temp array
   });
-  console.log("Got movies from API. Ready to insert into DB.....");
+  console.log("Got movies from API. Inserting into DB.....");
 };
 
 connection.once("open", async () => {
